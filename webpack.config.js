@@ -2,7 +2,7 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'development',
   entry: {
-    contentScripts: './src/contentScript/index.js'
+    contentScripts: './src/contentScripts/index.js'
   },
   output: {
     path: `${ __dirname}/build`,

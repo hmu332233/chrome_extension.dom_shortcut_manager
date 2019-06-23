@@ -2,6 +2,9 @@
   "name": "chrome_extension.dom_shortcut_manager",
   "version": "0.0.1",
   "main": "index.js",
+  "scripts": {
+    "build": "node_modules/webpack/bin/webpack.js"
+  },
   "repository": "https://github.com/hmu332233/chrome_extension.dom_shortcut_manager.git",
   "author": "minung.han <hmu332233@gmail.com>",
   "license": "MIT",
