@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "description": "",
   "browser_action": {
-    "default_title": "test"
+    "default_title": "dom shortcut manager",
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
