@@ -14,12 +14,25 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: "/node_modules",
+        exclude: '/node_modules',
         use: ['babel-loader'],
       },
       {
         test: /\.scss$/,
-        use: ["css-loader", "sass-loader"]
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            }
+          },
+          {
+            loader: 'sass-loader',
+          }
+        ]
       }
     ]
   },
