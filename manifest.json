@@ -13,5 +13,6 @@
       "js": ["build/contentScripts.js"]
     }
   ],
+  "web_accessible_resources": ["build/popup.js"],
   "permissions": ["activeTab"]
 }
