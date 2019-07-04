@@ -5,7 +5,7 @@ import styles from './MainApp.scss';
 import useDomPathWhenClick from 'hooks/useDomPathWhenClick';
 
 function MainApp(props) {
-  const [domPath] = useDomPathWhenClick();
+  const [domPath] = useDomPathWhenClick({ excepts: ['#dom_shortcut_management_app']});
   return (
     <div className={styles.MainApp}>
       {domPath}
