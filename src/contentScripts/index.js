@@ -1,10 +1,5 @@
 import hotkeys from 'hotkeys-js';
 
-hotkeys('ctrl+alt+k', function(event, handler){
-  event.preventDefault();
-});
-
-
 // inject dov
 var app = document.createElement('div');
 app.id = "dom_shortcut_management_app";
@@ -16,3 +11,20 @@ s.src = chrome.extension.getURL('build/popup.js');
 (document.head || document.documentElement).appendChild(s);
 
 s.parentNode.removeChild(s);
+
+
+
+let domPath = '';
+
+document.addEventListener('aaa', e => {
+  domPath = e.detail;
+  console.log(e)
+  console.log(domPath)
+});
+
+hotkeys('ctrl+alt+k', { keyup: true }, function(event, handler) {
+  if(event.type === 'keyup') {
+    document.querySelector(domPath).click();
+    event.preventDefault();
+  }
+});
